@@ -25,3 +25,50 @@ int main()
     }
       return 0;
 }
+
+
+2.#include "iostream"
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "RUS");
+    int i, n, k, min, max, start, end;
+    int pr[12];
+    for (i = 0;i < 12;i++)
+    {
+        cout << "Введите прибыль за " << i + 1 << " месяц: ";
+        cin >> pr[i];
+    }
+    cout << "Введите границы диапазона: ";
+    cin >> start >> end;
+    start = start - 1;
+    end = end - 1;
+    min = pr[start];
+    max = pr[start];
+    for (i = start;i <= end;i++)
+    {
+     if (min > pr[i])
+         min = pr[i];
+      
+    }
+    for (i = 0;i < 12;i++)
+    {
+        if (min == pr[i])
+            n = i;
+    }
+    cout << "Месяц с минимальным заработком: " << ++n << endl;
+
+    for (i = start;i <= end;i++)
+    {
+        if (max < pr[i])
+            max = pr[i];
+    }
+    for (i = 0;i < 12;i++)
+    {
+        if (max == pr[i])
+            k = i;
+    }
+    cout << "Месяц с максимальным заработком: " << ++k << endl;
+
+    return 0;
+}
