@@ -138,3 +138,71 @@ int main()
     system("pause>>nul");
     return 0;
 }
+
+4.#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "RUS");
+    const int N = 10;
+    const int M = 5;
+    int arr1[N];
+    int arr2[M], arr3[M];
+    int i;
+    cout << "Введите " << N << " элементов массива: ";
+    for (i = 0; i < N; i++)
+    {
+        cin >> arr1[i];
+    }
+    for (i = 0; i < M; i++) 
+    {
+        arr2[i] = arr1[i];
+        arr3[i] = arr1[i + M];
+    }
+
+    cout << "Первый массив-копия: ";
+    for (i = 0; i < M; i++) 
+    {
+        cout << arr2[i] << " ";
+    }
+    cout << endl;
+    cout << "Второй массив-копия: ";
+    for (i = 0; i < M; i++) 
+    {
+        cout << arr3[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+
+5.#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "RUS");
+    const int lenght = 10; 
+    int arr1[lenght] = {1, 2, 3, 4, 5,7,8,9,11,12}; 
+    int arr2[lenght] = {10, 20, 30, 40, 50, 61,75,88,96,99}; 
+    int result[lenght]; 
+
+    
+    for (int i = 0; i < lenght; ++i)
+    {
+        result[i] = arr1[i] + arr2[i];
+    }
+
+    cout << "Результат сложения массивов: ";
+    for (int i = 0; i < lenght; ++i) 
+    {
+     cout << result[i] << " ";
+    }
+    cout <<endl;
+
+    return 0;
+}
+   
